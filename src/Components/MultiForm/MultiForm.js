@@ -13,10 +13,17 @@ export default function MultiForm() {
         allergies: [],
         prefs: {}
     })
+
+    const modifyIndex = index => {
+      setFormIndex(index)
+    }
+
   return (
       <div className="container-multiform">
         <Indicator />
-        <CardBegin />
+        {formIndex === 1 ? <CardBegin modifyIndex={modifyIndex}/>
+        : ""}
+        
         {/* <CardEnd /> */}
 
 
